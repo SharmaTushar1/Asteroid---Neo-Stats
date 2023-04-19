@@ -1,0 +1,40 @@
+.home {
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.date {
+  display: flex;
+  font-size: xx-large;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.date > form {
+  width: 50vw;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-container-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.dates {
+  height: 100px;
+  width: 200px;
+  font-size: xx-large;
+}
+
+form > button {
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+}
