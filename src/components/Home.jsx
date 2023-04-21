@@ -9,7 +9,9 @@ const Home = () => {
   const [isError, setIsError] = useState(false)
   const navigate = useNavigate();
   const isValidInput = (start, end) => {
-    return !((new Date(start) > new Date(end)) || ((new Date(end)).getDate() - (new Date(start)).getDate()>7) || isNaN(Date.parse(end)) || isNaN(Date.parse(start)));
+    const diffTime = Math.abs(date2 - date1);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    return !((new Date(start) > new Date(end)) || (diffDays>7) || isNaN(Date.parse(end)) || isNaN(Date.parse(start)));
   }
 
   const handleSubmit = (e) => {
