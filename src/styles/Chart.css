@@ -1,0 +1,7 @@
+#chart {
+  display: inline-block;
+  height: 50vh;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+}
