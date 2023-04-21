@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Chart from './Chart';
+import '../styles/Main.css'
 
 const Main = () => {
   const curUrl = window.location.href;
@@ -8,18 +9,26 @@ const Main = () => {
 
   // we should store it on backend as this is exposed and anyone can get the access of our api token. But, here doing it on frontend only. ***Not a good practice though***
 
+  const [allData, setAllData] = useState(null)
+
   useEffect(() => {
     fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${START_DATE}&end_date=${END_DATE}&api_key=${process.env.REACT_APP_API_KEY}`)
     .then((response) => response.json())
-    .then(data => console.log(data))
+    .then(data => {setAllData(data)})
     .catch((err) => console.log(err));
   }, [])
   return (
-    <div className=''>
-      <Chart 
+    <div className='chart-container'>
+      <div>
+      <p>X axis is date and Y axis is the number of asteroids</p>
+      {
+        allData && <Chart 
         START_DATE={START_DATE} 
         END_DATE={END_DATE}
+        allData = {allData}
       />
+      }
+      </div>
     </div>
   )
 }
