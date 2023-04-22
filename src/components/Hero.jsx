@@ -27,7 +27,7 @@ ChartJS.register(
 );
 
 
-const Chart = ({START_DATE, END_DATE, allData}) => {
+const Hero = ({START_DATE, END_DATE, allData}) => {
   const allAsteroidData = allData.near_earth_objects;
   const dates = Object.keys(allAsteroidData);
   dates.sort();
@@ -85,10 +85,10 @@ const Chart = ({START_DATE, END_DATE, allData}) => {
 
   return (
     <div id="chart">
-      <Line options={options} data={data} />
+      <Line options={options} data={data} /> 
       <div id="chartjs-tooltip"></div>
     </div>
   )
 }
 
-export default Chart
+export default Hero

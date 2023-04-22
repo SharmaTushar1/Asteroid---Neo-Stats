@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Chart from './Chart';
+import Hero from './Hero';
 import '../styles/Main.css'
 
 const Main = () => {
@@ -22,7 +22,7 @@ const Main = () => {
       <div>
       <p>X axis is date and Y axis is the number of asteroids</p>
       {
-        allData && <Chart 
+        allData && <Hero 
         START_DATE={START_DATE} 
         END_DATE={END_DATE}
         allData = {allData}
