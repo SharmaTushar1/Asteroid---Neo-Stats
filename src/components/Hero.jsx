@@ -53,8 +53,6 @@ const Hero = ({START_DATE, END_DATE, allData}) => {
             dates = {dates}
           />);
 
-          const tooltipComponent = <CustomTooltip chart = {chart} tooltip = {tooltip} />;
-
           return '';
         }
       },

@@ -21,6 +21,7 @@ const Main = () => {
     <div className='chart-container'>
       <div>
       <p>X axis is date and Y axis is the number of asteroids</p>
+      <p>Hover on asteroid to see more data</p>
       {
         allData && <Hero 
         START_DATE={START_DATE} 
